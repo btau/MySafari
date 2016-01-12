@@ -19,14 +19,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self makeURLRequestWithString:@"http://www.cnn.com"];
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    NSURL *url = [NSURL URLWithString:self.urlTextField.text];
+-(BOOL)textFieldShouldReturn:(UITextField *)urlTextField{
+    [self makeURLRequestWithString:urlTextField.text];
+    return true;
+}
+
+-(void)makeURLRequestWithString:(NSString *)string {
+    NSURL *url = [NSURL URLWithString:string];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
-    return true;
 }
 
 -(void)webViewDidStartLoad:(UIWebView *)webView{
