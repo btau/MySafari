@@ -101,11 +101,11 @@
 		6953F70C1C4598C4006472D9 /* MySafari */ = {
 			isa = PBXGroup;
 			children = (
+				6953F7161C4598C4006472D9 /* Main.storyboard */,
 				6953F7101C4598C4006472D9 /* AppDelegate.h */,
 				6953F7111C4598C4006472D9 /* AppDelegate.m */,
 				6953F7131C4598C4006472D9 /* ViewController.h */,
 				6953F7141C4598C4006472D9 /* ViewController.m */,
-				6953F7161C4598C4006472D9 /* Main.storyboard */,
 				6953F7191C4598C4006472D9 /* Assets.xcassets */,
 				6953F71B1C4598C4006472D9 /* LaunchScreen.storyboard */,
 				6953F71E1C4598C4006472D9 /* Info.plist */,
@@ -496,6 +496,7 @@
 				6953F7391C4598C4006472D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6953F73A1C4598C4006472D9 /* Build configuration list for PBXNativeTarget "MySafariTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +505,7 @@
 				6953F73C1C4598C4006472D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6953F73D1C4598C4006472D9 /* Build configuration list for PBXNativeTarget "MySafariUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +514,7 @@
 				6953F73F1C4598C4006472D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
