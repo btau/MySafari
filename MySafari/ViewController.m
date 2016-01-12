@@ -26,10 +26,18 @@
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)urlTextField{
+    NSString *myURLString = @"www.cnn.com";
+    NSURL *myURL;
+    if ([self.urlTextField.text.lowercaseString hasPrefix:@"http://"]) {
+        myURL = [NSURL URLWithString:myURLString];
+    } else {
+        myURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@", myURLString]];
+    }
     [self makeURLRequestWithString:urlTextField.text];
     return true;
 }
 
+//method we created
 -(void)makeURLRequestWithString:(NSString *)string {
     NSURL *url = [NSURL URLWithString:string];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
