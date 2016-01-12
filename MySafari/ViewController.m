@@ -22,19 +22,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self makeURLRequestWithString:@"http://www.cnn.com"];
+    [self makeURLRequestWithString:@"http://www.google.com"];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)urlTextField{
-    NSString *myURLString = @"www.cnn.com";
-    NSURL *myURL;
-    if ([self.urlTextField.text.lowercaseString hasPrefix:@"http://"]) {
-        myURL = [NSURL URLWithString:myURLString];
+    NSString *urlString = urlTextField.text;
+    
+    BOOL hasPrefix = ([urlString hasPrefix:@"http://"]) || ([urlString hasPrefix:@"https://"]);
+    
+    if (hasPrefix == YES) {
+        [self makeURLRequestWithString:urlString];
+        
     } else {
-        myURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@", myURLString]];
+        NSString *newURLString = [NSString stringWithFormat:@"http://%@", urlString];
+        [self makeURLRequestWithString:newURLString];
     }
-    [self makeURLRequestWithString:urlTextField.text];
-    return true;
+    return self;
 }
 
 //method we created
@@ -79,6 +82,16 @@
     [self.webView reload];
 }
 
+- (IBAction)comingSoonWhenPressed:(UIButton *)sender {
+   
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Coming Soon" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelButton = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alertController addAction:cancelButton];
+    
+    [self presentViewController:alertController animated:TRUE completion:nil];
+}
 
 
 

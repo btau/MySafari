@@ -70,6 +70,16 @@
                                             <action selector="onReloadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZhV-Tt-OJU"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3b-62-j95">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="+"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="308" y="15" width="30" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="comingSoonWhenPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eg8-mm-rwv"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="default">
@@ -78,6 +88,7 @@
                                         <exclude reference="CMZ-jP-sm8"/>
                                         <exclude reference="aVr-ev-DDU"/>
                                         <exclude reference="NNx-IC-QYm"/>
+                                        <exclude reference="E3b-62-j95"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -87,6 +98,7 @@
                                         <include reference="CMZ-jP-sm8"/>
                                         <include reference="aVr-ev-DDU"/>
                                         <include reference="NNx-IC-QYm"/>
+                                        <include reference="E3b-62-j95"/>
                                     </mask>
                                 </variation>
                             </view>
