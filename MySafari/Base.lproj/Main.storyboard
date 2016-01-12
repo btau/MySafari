@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="30" width="400" height="541"/>
+                                    <rect key="frame" x="0.0" y="51" width="400" height="541"/>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="eRu-8d-Jfz"/>
@@ -29,21 +29,78 @@
                             </webView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55T-Kt-IQl">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvC-eL-4uT">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="&lt;"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="16" y="15" width="30" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onBackButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fen-ra-T3X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMZ-jP-sm8">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="&gt;"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="54" y="15" width="46" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onForwardButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IfN-hO-c3C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVr-ev-DDU">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="X"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="134" y="15" width="30" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onStopLoadingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5q-Ds-hMd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNx-IC-QYm">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Reload"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="197" y="15" width="47" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onReloadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZhV-Tt-OJU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="dvC-eL-4uT"/>
+                                        <exclude reference="CMZ-jP-sm8"/>
+                                        <exclude reference="aVr-ev-DDU"/>
+                                        <exclude reference="NNx-IC-QYm"/>
+                                    </mask>
+                                </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="541" width="400" height="59"/>
+                                    <mask key="subviews">
+                                        <include reference="dvC-eL-4uT"/>
+                                        <include reference="CMZ-jP-sm8"/>
+                                        <include reference="aVr-ev-DDU"/>
+                                        <include reference="NNx-IC-QYm"/>
+                                    </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvC-eL-4uT">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="&lt;"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pG-kk-Ldy">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="go"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="185" y="285" width="30" height="30"/>
+                                    <rect key="frame" x="0.0" y="20" width="400" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="onBackButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fen-ra-T3X"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tQk-33-5sX"/>
                                 </connections>
-                            </button>
+                            </textField>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="NRP-Ow-jqQ">
                                 <rect key="frame" x="-10" y="-10" width="20" height="20"/>
                                 <color key="color" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -51,36 +108,28 @@
                                     <rect key="frame" x="182" y="281" width="37" height="37"/>
                                 </variation>
                             </activityIndicatorView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pG-kk-Ldy">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="go"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="43" width="400" height="30"/>
-                                </variation>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="FOw-G9-xdn"/>
                                 <exclude reference="55T-Kt-IQl"/>
-                                <exclude reference="dvC-eL-4uT"/>
-                                <exclude reference="NRP-Ow-jqQ"/>
                                 <exclude reference="9pG-kk-Ldy"/>
+                                <exclude reference="NRP-Ow-jqQ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="FOw-G9-xdn"/>
                                 <include reference="55T-Kt-IQl"/>
-                                <include reference="dvC-eL-4uT"/>
-                                <include reference="NRP-Ow-jqQ"/>
                                 <include reference="9pG-kk-Ldy"/>
+                                <include reference="NRP-Ow-jqQ"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="onBackButtonPressed" destination="dvC-eL-4uT" id="0t1-1i-sSw"/>
+                        <outlet property="onForwardButtonPressed" destination="CMZ-jP-sm8" id="eDg-eL-NMv"/>
                         <outlet property="spinner" destination="NRP-Ow-jqQ" id="JIS-2R-KFV"/>
                         <outlet property="urlTextField" destination="9pG-kk-Ldy" id="Lsc-pc-mJ0"/>
                         <outlet property="webView" destination="FOw-G9-xdn" id="8Lj-Az-CNH"/>
